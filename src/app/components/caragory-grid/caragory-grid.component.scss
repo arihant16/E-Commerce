@@ -1,0 +1,28 @@
+@use "../../../variables" as *;
+.category-grid {
+  border: 1px solid #bfbfbf;
+  padding: 15px;
+  border-radius: 25px;
+  transition: $default-animation;
+  cursor: pointer;
+  .category-title {
+    font: $bold-title;
+    font-size: 22px;
+    text-align: center;
+  }
+  .category-body {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    .images {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &:hover {
+    background-color: #ffa60024;
+    box-shadow: inset 0px 0px 14px #ffa60066;
+    border-color: #9f9f9f;
+  }
+}

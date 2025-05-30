@@ -1,0 +1,21 @@
+<div class="feature-items-body">
+  <div class="image">
+    <img [src]="data.thumbnail" alt="">
+  </div>
+  <div class="details">
+    <div class="top">
+      <div class="title">{{data.title}}</div>
+      <div class="price">{{data.price | currency}}</div>
+    </div>
+    <div class="rating">
+      <app-rating [rating]="data.rating"></app-rating>
+    </div>
+    <div class="body">
+      <p>{{data.description}}<a class="link">Read More</a></p>
+    </div>
+    <div class="buttons">
+      <p-button size="large" label="Buy" [rounded]="true" icon="pi pi-plus" />
+      <p-button size="large" label="Add To Cart" [rounded]="true" icon="pi pi-cart-plus" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="feature">
+  <div class="items">
+    <p-carousel #carousel (onPage)="restartAutoplay(carousel)" [autoplayInterval]="5000" [value]="feature_producets"
+      [numVisible]="1" [numScroll]="1" [circular]="true">
+      <ng-template let-product #item>
+        <div class="border border-surface rounded-border m-2 p-4">
+          <app-featured-items [data]="product"></app-featured-items>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>

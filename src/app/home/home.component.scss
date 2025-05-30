@@ -1,0 +1,14 @@
+@use "../../variables" as *;
+.categories {
+  padding: 20px;
+  .category-title {
+    font: $bold-title;
+    padding-bottom: 20px;
+    cursor: default;
+  }
+  .category-body {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+}

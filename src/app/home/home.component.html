@@ -1,0 +1,13 @@
+<app-feature></app-feature>
+<div class="categories">
+  <div class="category-title">
+    Categories
+  </div>
+  <div class="category-body">
+    @for (item of category_list; track $index) {
+    <div class="category-box">
+      <app-caragory-grid [category]="item"></app-caragory-grid>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="top-bar">
+  <div class="left">
+    <img class="icon" src="favicon.ico" alt="">
+    <div routerLink="" class="button">
+      <i class="pi pi-home"></i>
+      Home
+    </div>
+    <div [routerLink]="'/product'" class="button">
+      <i class="pi pi-box"></i>
+      Products
+    </div>
+    <div [routerLink]="'/category'" class="button">
+      <i class="pi pi-objects-column"></i>
+      Category
+    </div>
+  </div>
+  <div class="right">
+    <div (click)="toast()" class="icon">
+      <i class="pi pi-search"></i>
+      Search
+    </div>
+    <div [routerLink]="'/cart'" class="icon">
+      <i class="pi pi-shopping-cart"></i>
+      Cart
+    </div>
+  </div>
+</div>
+<p-toast />

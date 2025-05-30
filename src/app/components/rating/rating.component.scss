@@ -1,0 +1,21 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+}
+
+.star-container {
+  position: relative;
+  margin-right: 2px;
+}
+
+.filled-star-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.star {
+  display: block;
+}

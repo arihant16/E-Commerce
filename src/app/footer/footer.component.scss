@@ -1,0 +1,24 @@
+.footer {
+  min-height: 50px;
+  background-color: #fbddb6;
+  padding: 0 25px;
+  padding-bottom: 25px;
+  cursor: default;
+  .top {
+    place-self: center;
+    ul {
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 10px 20px;
+      width: fit-content;
+      list-style: none;
+    }
+  }
+  .text {
+    align-content: center;
+    text-align: center;
+    margin: 0px;
+    height: fit-content;
+  }
+}

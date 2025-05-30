@@ -1,0 +1,52 @@
+@use "../../../variables" as *;
+.feature-items-body {
+  padding: 0 100px;
+  display: flex;
+  .image {
+    width: 40%;
+    img {
+      width: -webkit-fill-available;
+    }
+  }
+  .details {
+    flex: 1;
+    padding-top: 50px;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      .title {
+        font: $bold-title;
+      }
+      .price {
+        font: $regular-title;
+        font-size: 30px;
+      }
+    }
+    .body {
+      p {
+        font: $details;
+      }
+      .link {
+        color: $link-color;
+        cursor: pointer;
+        transform: $default-animation;
+        &:hover {
+          color: $link-color-hilight;
+        }
+      }
+    }
+    ::ng-deep .buttons {
+      display: flex;
+      gap: 15px;
+      .p-button {
+        background-color: $primary-color;
+        color: $font-color;
+        border-color: #ab360b;
+        transition: $default-animation;
+        &:hover {
+          background-color: $primary-color-hover;
+        }
+      }
+    }
+  }
+}

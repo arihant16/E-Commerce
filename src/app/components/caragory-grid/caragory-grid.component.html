@@ -1,0 +1,12 @@
+<div class="category-grid">
+  <div class="category-title">
+    {{category.name}}
+  </div>
+  <div class="category-body">
+    @for (item of data; track $index) {
+    <div class="images">
+      <img [src]="item.thumbnail" alt="">
+    </div>
+    }
+  </div>
+</div>

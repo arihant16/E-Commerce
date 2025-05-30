@@ -1,0 +1,46 @@
+@use "../../../variables" as *;
+.feature {
+  margin: 0 20px;
+  overflow: hidden;
+  ::ng-deep .items {
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50px; /* Adjust fade width */
+      z-index: 2;
+      pointer-events: none; /* Allow clicks to pass through */
+    }
+    &::before {
+      left: 33px;
+      background: linear-gradient(
+        90deg,
+        #fff9f7 0%,
+        #fff9f7f4 30%,
+        #fff9f7d4 50%,
+        #fff9f788 70%,
+        #fff9f700 100%
+      );
+    }
+
+    &::after {
+      right: 33px;
+      background: linear-gradient(
+        270deg,
+        #fff9f7 0%,
+        #fff9f7f4 30%,
+        #fff9f7d4 50%,
+        #fff9f788 70%,
+        #fff9f700 100%
+      );
+    }
+    .p-carousel-indicator-active .p-carousel-indicator-button {
+      background: $primary-color;
+    }
+  }
+}

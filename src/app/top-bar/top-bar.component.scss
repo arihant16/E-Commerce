@@ -45,3 +45,25 @@
     }
   }
 }
+.p-dialog-enter-active {
+  animation: demo-dialog-in 500ms ease-out;
+}
+
+.p-dialog-leave-active {
+  animation: demo-dialog-out 300ms ease-in;
+}
+
+@keyframes demo-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10%) scale(1.1);
+    filter: blur(10px);
+  }
+}
+
+@keyframes demo-dialog-out {
+  to {
+    opacity: 0;
+    transform: translateY(200%) rotate(-90deg);
+  }
+}

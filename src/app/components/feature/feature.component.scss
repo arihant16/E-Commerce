@@ -41,6 +41,25 @@
     }
     .p-carousel-indicator-active .p-carousel-indicator-button {
       background: $primary-color;
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 10px;
+        background-color: $primary-color-hover;
+        animation: cover 5000ms linear;
+        @keyframes cover {
+          from {
+            width: 0%;
+          }
+          to {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

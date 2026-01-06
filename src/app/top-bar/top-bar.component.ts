@@ -1,6 +1,6 @@
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
@@ -14,9 +14,13 @@ import { ToastModule } from 'primeng/toast';
 })
 export class TopBarComponent {
 
-  dialog: boolean = false;
+  public dialog = signal(false);
 
   constructor(private messageService: MessageService) { }
+
+  toggleMenu() {
+    this.dialog.update(value => !value);
+  }
 
   toast() {
     this.messageService.add({ severity: 'warn', summary: 'Feature Comming Soon', detail: 'Work in progress', life: 3000 })
